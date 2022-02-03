@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ESCAPE!</title>
+        <link rel ="stylesheet" href="styles.css">
+        <script src="jquery-ui.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/path/to/jquery.mCustomScrollbar.css" />
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/path/to/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script>
+
+
+        </script>
+    </head>
+    <body>
+
+
+
+    <div class= "objects">
+        <div class= "Background">
+
+        <div class= "Background1"> <img id= "B1" src="Image/Background1.png">
+        </div> 
+        <div class= "Backround2"><img id= "B2" src="Image/Background2.png"></div></div>
+    </div>
+
+
+    <div class= "door">  </div>
+    <div class= "fireplace" id="fireplace">  </div>
+    <div class= "fireplaceHand" id="fireplace">  </div>
+    <div class= "typewriter"></div>
+    <div class= "book1" ></div>
+    <div class= "book2" ></div>
+    <div class= "carpet" ></div>
+    <div class="newspaper"></div>
+    <div class="wall"></div>
+    <div class="QuoteBook"></div>
+
+
+<div class="Arrow">
+    <div class = "Arrow1"><img src="Image/left.png"></div>
+    <div class = "Arrow2"><img src="Image/right.png"></div>
+</div>
+
+<div class="bookPile">
+    <div class="bookPile1"></div>
+    <div class="bookPile2"></div>
+    <div class="bookPile3"></div>
+</div>
+
+<div class="recordPlayer"></div>
+
+
+<div class= "inventory">
+    <div id="inventoryHead">
+        <h3> Inventory </h3>
+    </div>
+    
+    <div id="inventoryList">
+
+        
+        <div id="key" class="inv">
+            <div class="icon">
+                <img src="Image/key.png">
+            </div>
+            <div class="itext">
+                <h4>Key</h4><h5> Key for the locked door </h5>
+            </div>
+        </div>
+        
+        <div id="cane" class="inv">
+            <div class="icon">
+                <img src="Image/canehand.png">
+            </div>
+            <div class="itext">
+                <h4>Cane</h4><h5> Walking Cane </h5>
+            </div>
+        </div>
+
+        <div id="cane1" class="inv">
+            <div class="icon">
+                <img src="Image/canehand.png">
+            </div>
+            <div class="itext">
+                <h4>Cane</h4><h5> Walking Cane </h5>
+            </div>
+        </div>
+
+        <div id="glassbottle" class="inv">
+            <div class="icon">
+                <img src="Image/bottle1.png">
+            </div>
+            <div class="itext">
+                <h4>Glass Bottle</h4><h5> Glass bottle with paper inside </h5>
+            </div>
+        </div>
+
+        <div id="glassbottleopen" class="inv">
+            <div class="icon">
+                <img src="Image/bottle2.png">
+            </div>
+            <div class="itext">
+                <h4>Glass Bottle</h4><h5> Empty glass bottle </h5>
+            </div>
+        </div>
+
+        <div id="paper1" class="inv">
+            <div class="icon">
+                <img src="Image/Q1.png">
+            </div>
+            <div class="itext">
+                <h4>Paper 1</h4><h5>Ripped piece of Paper found inside the book </h5>
+            </div>
+        </div>
+        <div id="paper2" class="inv">
+            <div class="icon">
+                <img src="Image/Q2.png">
+            </div>
+            <div class="itext">
+                <h4>Paper 2</h4><h5>Ripped piece of Paper found inside the book </h5>
+            </div>
+        </div>
+        <div id="paper3" class="inv">
+            <div class="icon">
+                <img src="Image/Q3.png">
+            </div>
+            <div class="itext">
+                <h4>Paper 3</h4><h5>Ripped piece of Paper found inside the book </h5>
+            </div>
+        </div>
+        <div id="paper4" class="inv">
+            <div class="icon">
+                <img src="Image/Q4.png">
+            </div>
+            <div class="itext">
+                <h4>Paper 4</h4><h5>Ripped piece of Paper found behind the newspaper </h5>
+            </div>
+        </div>
+        <div id="paper5" class="inv">
+            <div class="icon">
+                <img src="Image/Q5.png">
+            </div>
+            <div class="itext">
+                <h4>Paper 5</h4><h5>Ripped piece of Paper found inside the book </h5>
+            </div>
+        </div>
+        
+    </div>
+    <div id="inventoryFoot"><p>Back</p></div>
+</div>
+
+
+<div class="paper2" id="item"><img src="Image/Q2.png"></div>
+
+<div class="paper1" id="item"><img src="Image/Q1.png"></div>
+
+<div class="paper5" id="item"><img src="Image/Q5.png"></div>
+
+<div class="paper4" id="item"><img src="Image/Q4.png"></div>
+
+<div class="paper3" id="item"><img src="Image/Q3.png"></div>
+
+<div class="caneimage" id="item"><img src="Image/canefull.png"></div>
+
+
+<div class="key" id="unlock"><img src="Image/key.png"></div>
+
+
+<div class="itemBack"><h3>Back</h3></div>
+
+<div class="inventory_B"><img src="Image/inventory.png"></div>
+
+<div class="JayCarter">
+    <div class = "JayNormal"><img src="Image/Jay.png"></div>
+    <div class = "JaySmile"></div>
+    <div class = "JayBack"></div>
+</div>
+
+
+
+<div class= "TextBox">
+    <div id="name"><h1>Journalist J</h1></div>
+    <div class="textback"><img src="Image/quill.png"></div>
+    <div id="Tbody">
+        <p class="scrpt" id="scrpt_"> Nothing is here. </p>
+        <p class="scrptlocked"> It seems I need a key to open this... </p>
+        <p class="typing"></p> 
+    </div>
+</div>
+
+
+
+<div class= "TextBox1"> 
+    <div id="name"><h1>Journalist J</h1></div>     
+    <div id="Tbody"> 
+    <p class="scrptT"> Maybe I can type in this typewriter... </p>
+    
+    <p class="scrptQB"> Which page should I read? </p>
+
+    <p class="typing"></p> </div></div>
+
+<div class= "TextBox2">
+    <div id="name"><h1>Journalist J</h1></div>
+    <div class="textback"><img src="Image/quill.png"></div>
+    <div id="Tbody">
+        <p class="scrptB"> Something is inside of this book... </p>
+        <p class="scrptN"> Wait, I can feel something is behind... </p>
+        <p class="scrptN1"> There is nothing special with this newspaper. </p>
+        <p class="scrptC"> Something is underneath of this carpet... </p>
+        <p class="typing"></p> 
+    </div>
+
+</div>
+
+<div class= "TextBox3">
+    <div id="name"><h1>Journalist J</h1></div>
+    <div class="textback"><img src="Image/quill.png"></div>
+    <div id="Tbody">
+        <p class="scrptW"> I need to move to see this side of the room. </p>
+        <p class="scrpt_bookPile1"> It is not a good idea to read a book right now...  </p>
+        <p class="scrpt_fire"> I'm going to burn my hand if I reach there.  </p>
+        <p class="typing"></p> 
+    </div>
+</div>
+
+
+<div class= "TextBox4">
+    <div id="name"><h1>Journalist J</h1></div>
+    <div id="Tbody">
+        <p class="scrptK"> ...Something came out. </p>
+        <p class="scrptNo"> Well, maybe this is not a correct answer. </p>
+        <p class="scrptQNo"> Nothing is special with this page... </p>
+        <p class="scrptQYes"> 'Nothing is a waste of time if you use the experience wisely. – Auguste Rodin' </p>
+        <p class="typing"></p> 
+    </div>
+</div>
+
+<div class= "type" id="#type">
+	<div class="answer"></div>
+<div class="w"><img src="Image/typewriter.png"></div>
+<input type="text" id="answer">
+
+<input type="button" onclick="func()" value="Check">
+<div class="typeback"><img src="Image/quill.png"></div>
+
+<script type="text/javascript">
+function func() {
+
+	let answer = document.getElementById('answer').value;
+	if(answer == ""){
+
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").hide();
+        $(".scrptNo").show();
+        $(".scrptQNo").hide();
+        $(".scrptQYes").hide()
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+	}
+	else if(answer == "place"){
+        $("#key").show();
+        $(".type").fadeOut();
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").show();
+        $(".scrptNo").hide();
+        $(".scrptQNo").hide();
+        $(".scrptQYes").hide();
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+        
+	}
+	else{
+		document.getElementById('answer').value = "";
+
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").hide();
+        $(".scrptNo").show();
+        $(".scrptQNo").hide();
+        $(".scrptQYes").hide()
+        
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+	}
+}
+
+</script> </div>
+
+
+<div class= "type1" id="#type">
+	<div class="answer1" id="answ"></div>
+<div class="w1"><img src="Image/Quotebook.png"></div>
+<input type="text" id="answer1">
+
+<input type="button" onclick="func1()" value="Check">
+<div class="typeback"><img src="Image/quill.png"></div>
+
+<script type="text/javascript">
+function func1() {
+
+	let answer1 = document.getElementById('answer1').value;
+	if(answer1 == ""){
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").hide();
+        $(".scrptNo").hide();
+        $(".scrptQNo").show();
+        $(".scrptQYes").hide()
+        
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+	}
+	else if(answer1 == "51"){
+        $(".type1").fadeOut();
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").hide();
+        $(".scrptNo").hide();
+        $(".scrptQNo").hide();
+        $(".scrptQYes").show()
+        
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+ 
+        
+	}
+	else{
+		document.getElementById('answer').value = "";
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").hide();
+        $(".scrptNo").hide();
+        $(".scrptQNo").show();
+        $(".scrptQYes").hide()
+        
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+	}
+}
+
+
+
+</script> </div>
+    </script> </div>
+
+
+<div class="Info"></div>
+
+
+
+    </body>
+</html>

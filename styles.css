@@ -1,0 +1,597 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{cursor: url(Image/cursor.png), auto}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f193; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+#item{
+    width: 300px;
+    top:10%;
+    left:30%;
+    position:fixed;
+    cursor: pointer;
+}
+
+
+
+.key{
+    width: 150px;
+    top:10%;
+    left:30%;
+    position:fixed;
+    cursor: pointer;
+}
+
+
+
+
+
+.itemBack{
+    width: 150px;
+    height: 50px;
+    bottom:0;
+    right:0;
+    margin-right:10%;
+    margin-bottom:5%;
+    position:fixed;
+    border: 3px solid #202020;
+    border-radius: 10px;
+    background-color: rgba(221, 221, 221, 0.911);
+    align-items: center;
+}
+
+.itemBack h3{
+    margin-top: 6%;
+    margin-left: 35%;
+}
+
+
+.Tbody p{
+    display: none;
+  }
+  
+.typing {  
+  /*position: absolute;*/ 
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.6s; 
+    animation-iteration-count: infinite; 
+   } 
+   @keyframes cursor{ 
+    0%{border-right: 1px solid rgba(255, 255, 255, 0)} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid rgba(255, 255, 255, 0)} 
+  }
+
+
+.book1{
+    height: 15%;
+    width: 2.5%;
+    top:40%;
+    left:18%;
+    position:fixed;
+    bottom:0;
+}
+
+.book2{
+    height: 14%;
+    width: 5%;
+    top:46%;
+    left:31.5%;
+    position:fixed;
+
+}
+
+.newspaper{
+    height: 40%;
+    width: 25%;
+    top:13%;
+    left:1%;
+    position:fixed;
+}
+
+
+#fireplace{
+    height: 35%;
+    width: 18%;
+    top:40%;
+    left:50%;
+    position:fixed;
+}
+
+.fireplace{
+    z-index: -3;
+}
+
+.fireplaceHand{
+    z-index: -4;
+}
+
+.carpet{
+    height: 12%;
+    width: 10%;
+    bottom:10%;
+    right: 12%;
+    position:fixed;
+}
+
+.bookPile1{
+    height: 15%;
+    width: 15%;
+    top:62%;
+    left:9.5%;
+    position:fixed;
+    transform: rotate(-20deg) skew(-20deg);
+}
+
+.bookPile2{
+    height: 15%;
+    width: 19%;
+    top:12%;
+    left:38%;
+    position:fixed;
+}
+
+.bookPile3{
+    height:30%;
+    width: 15%;
+    top:10%;
+    left:8.5%;
+    position:fixed;
+    transform: rotate(-10deg) skew(-20deg);
+
+
+}
+
+
+.wall{
+    height: 100%;
+    width: 7%;
+    top:0;
+    right:0;
+    position:fixed;
+    bottom:0;
+}
+
+#paper_view{
+    top:40%;
+    left:40%;
+    width: 30%;
+}
+
+
+.TextBox{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: none;
+  }
+  
+#name {
+    height:35%;
+    box-sizing: border-box;
+    background-color: rgba(107, 107, 107, 0.726);
+    } 
+
+#name h1 {
+    font-size: 32px; 
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    } 
+
+#Tbody {    height: calc(50%);
+    width: 100%; 
+    margin-top: 25px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+
+.JayCarter{
+    width: 520px;
+    background-color:transparent;
+    position:fixed;
+    top:18%;
+    right: 7%;
+    color: white;
+    font-size: 64px;
+}
+
+.TextBox{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #000000;
+    background-color: rgba(189, 189, 189, 0.623);
+    position:fixed;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    font-size: 64px;
+}
+
+.TextBox1{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #000000;
+    background-color: rgba(189, 189, 189, 0.623);
+    position:fixed;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    font-size: 64px;
+}
+
+.TextBox2{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #000000;
+    background-color: rgba(189, 189, 189, 0.623);
+    position:fixed;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    font-size: 64px;
+}
+
+.TextBox3{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #000000;
+    background-color: rgba(189, 189, 189, 0.623);
+    position:fixed;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    font-size: 64px;
+}
+
+.TextBox4{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #000000;
+    background-color: rgba(189, 189, 189, 0.623);
+    position:fixed;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    font-size: 64px;
+}
+
+.textback{
+    height: 100px;
+    width: 100px;
+    position:fixed;
+    bottom:5%;
+    right:7%; 
+    cursor: pointer;
+    animation-name:waa;
+    animation-duration: 1s; /*지속시간 */
+	animation-timing-function: ease-out;
+	animation-delay: 0s; /* 애니메이션 시작하기까지 */
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;}
+
+
+@keyframes waa{
+	0%{
+		transform: translateY(0px);
+	}
+
+	60%{
+		transform: translateY(-10px);
+
+	}
+
+	100%{
+		transform: translateY(0px);
+	}
+
+	}
+
+
+.recordPlayer{
+    height: 15%;
+    width: 19%;
+    top:25%;
+    left:50%;
+    position:fixed;
+    cursor: pointer;
+}
+
+.Arrow1{
+    height: 70px;
+    margin: 20px;
+    background-color: transparent;
+    position:fixed;
+    bottom:40%;
+    left:0%;
+    opacity: 70%;
+    cursor: pointer;
+
+}
+
+.Arrow1:hover{
+    height: 70px;
+    margin: 20px;
+    background-color: transparent;
+    position:fixed;
+    bottom:40%;
+    left:0%;
+    opacity: 40%;
+    cursor: pointer;
+}
+
+.Arrow2{
+    height: 70px;
+    margin: 20px;
+    background-color: transparent;
+    position:fixed;
+    bottom:40%;
+    right:0%;
+    opacity: 85%;
+    cursor: pointer;
+}
+
+.Arrow2:hover{
+    height: 70px;
+    margin: 20px;
+    background-color: transparent;
+    position:fixed;
+    bottom:40%;
+    right:0%;
+    opacity: 40%;
+    cursor: pointer;
+}
+
+.Background{
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    top:0%;
+    left:0%;
+    opacity: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.door{
+    height: 53.5%;
+    width: 13.2%;
+    background-color:transparent;
+    position:fixed;
+    opacity: 30%;
+    top:20%;
+    left:58.2%;
+    cursor:pointer;
+}
+
+.inventory_B{
+    border-radius: 10px;
+    background-color: rgba(189, 189, 189, 0.911);
+    height: 150px;
+    width: 150px;
+    top:5%;
+    left:5%;
+    position:fixed;
+    bottom:0;
+    cursor: pointer;
+    border: 3px solid #202020;
+    border-radius: 10px;
+}
+
+.inventory_B img{
+    margin-top: 20%;
+    height: auto;
+    width: 100%;
+    bottom:0;
+}
+
+.inventory_B :hover{
+    margin-top: 20%;
+    height: auto;
+    width: 100%;
+    bottom:0;
+    opacity:70%;
+}
+
+.inventory{
+    height: 500px;
+    width: 350px;
+    border: 3px solid #202020;
+    border-radius: 10px;
+    background-color: rgba(221, 221, 221, 0.911);
+    padding: 10px;
+    box-sizing: border-box;
+    position:fixed;
+    top:5%;
+    left:5%;
+    cursor: pointer;
+}
+
+.inventory p{
+    float:right;
+    margin: 5px;
+}
+
+#inventoryHead {
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid #202020;
+    }
+
+#inventoryHead h3 {
+    font-size: 18px; float: left;
+    padding-top: 10px;
+    box-sizing: border-box;
+    } 
+
+ #inventoryHead img {
+    width: 20%;
+    float: right;
+    } 
+
+#inventoryList {
+    height: calc(100% - 75px);
+    width: 100%; 
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow-y:scroll;
+}
+
+.inv{
+    width: 100%;
+    height: 50px;
+}
+.inv:not(:last-child) {margin-bottom: 10px;}
+.icon{
+    height: 100%;
+    width: 50px;
+    border: 3px solid rgb(53, 53, 53);
+    box-sizing: border-box;
+    border-radius: 10px;
+    float: left;
+
+}
+
+.icon img{
+    width:60%;
+    height:60%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.itext{
+    width: calc( 100% - 50px);
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+}
+
+#inventoryFoot {
+    height: 25px;
+    width: 100%; 
+    border-top: 2px solid #202020;
+}
+
+.QuoteBook{
+    height: 60px;
+    width: 90px;
+    position:fixed;
+    top:46%;
+    left:71.5%;
+
+}
+
+.typewriter{
+    height: 100px;
+    width: 90px;
+    position:fixed;
+    top:42.5%;
+    left:80%;
+}
+
+.typeback{
+    height: 100px;
+    width: 100px;
+    position:fixed;
+    bottom:5%;
+    right:7%; 
+    cursor: pointer;
+    animation-name:waa;
+    animation-duration: 1s; /*지속시간 */
+	animation-timing-function: ease-out;
+	animation-delay: 0s; /* 애니메이션 시작하기까지 */
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;}
+    
+.type{
+    height: 70%;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+    position:fixed;
+
+
+
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.type1{
+    height: 70%;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+    position:fixed;
+
+
+
+    align-items: center;
+    z-index:1;
+    cursor: pointer;
+}
+
+.w{
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 8%;
+}
+
+.w1{
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 8%;
+}
+
+img{
+    width:100%;
+    height:100%;
+}
+
+
