@@ -25,7 +25,7 @@ $(document).ready(function(){
       
     /*웹페이지 열었을 때*/
     $(".II").hide();
-
+    $(".end").hide();
     $(".Background1").show();
     $(".bookPile1").show();
     $(".bookPile2").show();
@@ -53,6 +53,7 @@ $(document).ready(function(){
     $(".TextBox2").hide();
     $(".TextBox3").hide();
     $(".TextBox4").hide();
+    $(".TextBox5").hide();
     $(".type").hide();
     $(".type1").hide();
     $(".itemBack").hide();
@@ -112,6 +113,10 @@ $(document).ready(function(){
         $(".II").hide();
     });
 
+    $(".retry").click(function(){
+        window.location.href="https://geeinkim.github.io/Escape/";
+    });
+
     $(".bookPile").click(function(){
         var audio = new Audio('sound/bookPile.mp3');
         audio.play();
@@ -124,6 +129,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".scrpt_bookPile1").show();
         $(".scrptW").hide();
         $(".scrpt_fire").hide();
@@ -147,6 +153,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".scrpt_bookPile1").hide();
         $(".scrptW").hide();
         $(".scrpt_fire").show();
@@ -162,6 +169,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".scrptlocked").hide();
         $(".scrptT").hide();
         $(".scrpt").show();
@@ -260,6 +268,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
     });
 
     $(".wall").click(function(){
@@ -275,6 +284,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         
     });
 
@@ -295,6 +305,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".TextBox1").click(function(){
             $(".type").fadeIn(1000);
             $(".type1").hide();
@@ -319,6 +330,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".scrptT").hide();
         $(".scrptQB").show();
         $(".scrptlocked").hide();
@@ -367,6 +379,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();   
+        $(".TextBox5").hide();
    
     });
 
@@ -389,6 +402,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
    
     });
 
@@ -477,6 +491,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
    
     });
 
@@ -496,6 +511,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".carpet").remove();
    
     });
@@ -516,6 +532,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
    
     });
 
@@ -537,6 +554,7 @@ $(document).ready(function(){
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".TextBox5").hide();
         $(".newspaper").remove();
 
     });
@@ -564,8 +582,22 @@ $( function() {
     );
     $( ".door" ).droppable({
       drop: function( event, ui ) {
-          alert('Door unlocked');
-          window.location.href="https://www.google.com/";}
+
+        $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
+        $("#name").fadeIn();
+        $(".TextBox5").fadeIn();
+        $(".TextBox1").hide();
+        $(".TextBox").hide();
+        $(".TextBox2").hide();
+        $(".TextBox3").hide();
+        $(".TextBox4").hide();
+        $(".TextBox5").click(function(){
+          $(".end").fadeIn();});
+        $(".JayCarter").click(function(){
+            $(".end").fadeIn();}
+        )}
   
 });
 

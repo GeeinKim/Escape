@@ -36,6 +36,21 @@ html{cursor: url(Image/cursor.png), auto}
     cursor: pointer;
 }
 
+.end{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 200;
+    position: fixed;
+    color:#888;
+}
+
+
+.end img{
+    width:100%;
+    object-fit: cover;
+}
+
 
 h3{
     font-family: superior-title, serif;
@@ -176,6 +191,18 @@ text-align:center;
     width: 40%;
     bottom:25%;
     right: 30%;
+    position:fixed;
+    z-index: 59;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.retry{
+    height: 40%;
+    width: 40%;
+    bottom:5%;
+    right: 2.5%;
     position:fixed;
     z-index: 59;
     border-radius: 10px;
@@ -434,6 +461,22 @@ p{
 }
 
 .TextBox4{
+    height: 200px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
+    position:fixed;
+    bottom:0;
+    color: #202020;
+    font-size: 64px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.TextBox5{
     height: 200px;
     width: 90%;
     margin-bottom: 10px;
