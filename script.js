@@ -596,7 +596,7 @@ $( function() {
         $(".TextBox5").click(function(){
           $(".end").fadeIn();});
         $(".JayCarter").click(function(){
-            $(".end").fadeIn();}
+            $(".end").fadeIn(1500);}
         )}
   
 });
