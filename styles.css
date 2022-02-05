@@ -60,6 +60,7 @@ html{cursor: url(Image/cursor.png), auto}
     border-radius: 10px;
     background-color: rgba(221, 221, 221, 0.911);
     align-items: center;
+    cursor: pointer;
 }
 
 .itemBack h3{
@@ -162,6 +163,42 @@ html{cursor: url(Image/cursor.png), auto}
     position:fixed;
     transform: rotate(-10deg) skew(-20deg);
 
+
+}
+
+.bookPile4{
+    height:15%;
+    width: 12%;
+    top:30%;
+    right:20%;
+    position:fixed;
+
+}
+
+.bookPile5{
+    height:15%;
+    width: 10%;
+    top:45%;
+    right:12%;
+    position:fixed;
+
+}
+
+.bookPile6{
+    height:15%;
+    width: 12%;
+    top:30%;
+    left:40%;
+    position:fixed;
+
+}
+
+.bookPile7{
+    height:15%;
+    width: 8%;
+    top:45%;
+    left:50%;
+    position:fixed;
 
 }
 

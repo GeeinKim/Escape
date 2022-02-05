@@ -55,6 +55,10 @@
     <div class="bookPile1"></div>
     <div class="bookPile2"></div>
     <div class="bookPile3"></div>
+    <div class="bookPile4"></div>
+    <div class="bookPile5"></div>
+    <div class="bookPile6"></div>
+    <div class="bookPile7"></div>
 </div>
 
 <div class="recordPlayer"></div>
@@ -181,8 +185,7 @@
 
 <div class="JayCarter">
     <div class = "JayNormal"><img src="Image/Jay.png"></div>
-    <div class = "JaySmile"></div>
-    <div class = "JayBack"></div>
+    <div class = "JayBack"><img src="Image/Jay_1.png"></div>
 </div>
 
 
@@ -216,6 +219,7 @@
         <p class="scrptN"> Wait, I can feel something is behind... </p>
         <p class="scrptN1"> There is nothing special with this newspaper. </p>
         <p class="scrptC"> Something is underneath of this carpet... </p>
+        <p class="scrptFF"> Something is there... </p>
         <p class="typing"></p> 
     </div>
 
@@ -268,7 +272,21 @@ function func() {
             $(".JayCarter").hide();
             $(".TextBox4").hide();});
 	}
-	else if(answer == "place"){
+	else if(answer == "nothing"){
+        $("#key").show();
+        $(".type").fadeOut();
+        $(".JayCarter").fadeIn();
+        $(".TextBox4").fadeIn();
+        $(".scrptK").show();
+        $(".scrptNo").hide();
+        $(".scrptQNo").hide();
+        $(".scrptQYes").hide();
+        $(".TextBox4").click(function(){
+            $(".JayCarter").hide();
+            $(".TextBox4").hide();});
+        
+	}
+    else if(answer == "Nothing"){
         $("#key").show();
         $(".type").fadeOut();
         $(".JayCarter").fadeIn();

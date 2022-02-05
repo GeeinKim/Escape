@@ -1,4 +1,27 @@
 $(document).ready(function(){
+
+//             // 타이핑될 텍스트를 가져온다 
+// var typingTxt = $(".Tbody").text(); 
+// typingBool=false;
+// typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+
+// if(typingBool==false){ 
+//   // 타이핑이 진행되지 않았다면 
+//    typingBool=true;     
+//    var tyInt = setInterval(typing,70); // 반복동작 
+// } 
+     
+// function typing(){ 
+//   if(typingIdx<typingTxt.length){ 
+//     // 타이핑될 텍스트 길이만큼 반복 
+//     $(".typing").append(typingTxt[typingIdx]);
+//     // 한글자씩 이어준다. 
+//     typingIdx++; 
+//    } else{ 
+//      //끝나면 반복종료 
+//     clearInterval(tyInt);
+//    } 
+// }  
       
     /*웹페이지 열었을 때*/
 
@@ -6,6 +29,10 @@ $(document).ready(function(){
     $(".bookPile1").show();
     $(".bookPile2").show();
     $(".bookPile3").show();
+    $(".bookPile4").hide();
+    $(".bookPile5").hide();
+    $(".bookPile6").show();
+    $(".bookPile7").show();
 
     $(".recordPlayer").hide();
     $(".puzzle").hide();
@@ -69,6 +96,8 @@ $(document).ready(function(){
         audio.play();
         $(".JayCarter").fadeIn();
         $(".TextBox3").fadeIn();
+        $(".Jay_1").hide();
+        $(".Jay").show();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
         $(".TextBox").hide();
@@ -97,36 +126,16 @@ $(document).ready(function(){
         $(".scrptW").hide();
         $(".scrpt_fire").show();
     });
-
-    $(".objects").click(function(){
+  $(".objects").click(function(){
+  
         $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
         $(".TextBox").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
-//         // 타이핑될 텍스트를 가져온다 
-// var typingTxt = $("#scrpt_").text(); 
-
-// typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
-
-// if(typingBool==false){ 
-//   // 타이핑이 진행되지 않았다면 
-//    typingBool=true;     
-//    var tyInt = setInterval(typing,70); // 반복동작 
-// } 
-     
-// function typing(){ 
-//   if(typingIdx<typingTxt.length){ 
-//     // 타이핑될 텍스트 길이만큼 반복 
-//     $(".typing").append(typingTxt[typingIdx]);
-//     // 한글자씩 이어준다. 
-//     typingIdx++; 
-//    } else{ 
-//      //끝나면 반복종료 
-//     clearInterval(tyInt);
-//    } 
-// }  
         $(".scrptlocked").hide();
         $(".scrptT").hide();
         $(".scrpt").show();
@@ -150,6 +159,10 @@ $(document).ready(function(){
         $(".bookPile1").hide();
         $(".bookPile2").hide();
         $(".bookPile3").hide();
+        $(".bookPile4").show();
+        $(".bookPile5").show();
+        $(".bookPile6").hide();
+        $(".bookPile7").hide();
         $(".fireplaceHand").show();
 
         $("#cane1").hide(); 
@@ -157,6 +170,7 @@ $(document).ready(function(){
 
         $(".QuoteBook").hide();
         $(".typewriter").hide();
+        
     });
 
     $(".Arrow1").click(function(){
@@ -178,6 +192,10 @@ $(document).ready(function(){
         $(".bookPile1").show();
         $(".bookPile2").show();
         $(".bookPile3").show();
+        $(".bookPile4").hide();
+        $(".bookPile5").hide();
+        $(".bookPile6").show();
+        $(".bookPile7").show();
         $(".fireplace").hide();
         $(".fireplaceHand").hide();
 
@@ -205,6 +223,8 @@ $(document).ready(function(){
         var audio = new Audio('sound/door.mp3');
         audio.play();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox").fadeIn();
         $(".scrpt").hide();
         $(".scrptT").hide();
@@ -217,6 +237,8 @@ $(document).ready(function(){
 
     $(".wall").click(function(){
         $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
         $(".TextBox3").fadeIn();
         $(".scrpt_fire").hide();
         $(".scrpt_bookPile1").hide();
@@ -231,6 +253,8 @@ $(document).ready(function(){
 
     $(".typewriter").click(function(){
         $(".JayCarter").fadeIn();
+        $(".JayNormal").hide();
+        $(".JayBack").show();
         $(".TextBox1").fadeIn();
         $(".scrptT").show();
         $(".scrptQB").hide();
@@ -253,6 +277,8 @@ $(document).ready(function(){
     
     $(".QuoteBook").click(function(){
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox1").fadeIn();
         $(".TextBox").hide();
         $(".TextBox2").hide();
@@ -283,19 +309,22 @@ $(document).ready(function(){
         $(".TextBox4").hide();
         $(".type").hide();
         $(".type1").hide();
-        typingTxt = 0
     });
 
     $(".book1").click(function(){
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper1").show();
+        $(".book1").remove();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();
         $(".scrptN").hide();
         $(".scrptB").show();
         $(".scrptN1").hide();
+        $(".scrptFF").hide();
         $(".TextBox1").hide();
         $(".TextBox").hide();
         $(".TextBox3").hide();
@@ -307,11 +336,15 @@ $(document).ready(function(){
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper2").show();
+        $(".book2").remove();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();
         $(".scrptN").hide();
         $(".scrptN1").hide();
+        $(".scrptFF").hide();
         $(".scrptB").show();
         $(".TextBox1").hide();
         $(".TextBox").hide();
@@ -397,6 +430,8 @@ $(document).ready(function(){
     $(".book2").click(function(){
         $("#paper2").show();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox").hide();
@@ -408,26 +443,33 @@ $(document).ready(function(){
     $(".carpet").click(function(){
         $("#paper5").show();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".scrptC").show();
         $(".scrptN").hide();
         $(".scrptN1").hide();
+        $(".scrptFF").hide();
         $(".scrptB").hide();
         $(".TextBox1").hide();
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".carpet").remove();
    
     });
 
 
     $(".newspaper").click(function(){
         $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();       
         $(".scrptB").hide();
         $(".scrptN").hide();
         $(".scrptN1").show(); 
+        $(".scrptFF").hide();
         $(".TextBox1").hide();
         $(".TextBox").hide();
         $(".TextBox3").hide();
@@ -439,16 +481,20 @@ $(document).ready(function(){
     $(".newspaper").dblclick(function(){
         $("#paper4").show();
         $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();       
         $(".scrptB").hide();
         $(".scrptN").show();
         $(".scrptN1").hide();   
+        $(".scrptFF").hide();
         $(".newspaper").hide();  
         $(".TextBox1").hide();
         $(".TextBox").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $(".newspaper").remove();
 
     });
 
@@ -491,6 +537,19 @@ $( function() {
     $( ".fireplace" ).droppable({
       drop: function( event, ui ) {
         $("#glassbottle").show();
+        $(".JayCarter").fadeIn();
+        $(".JayBack").show();
+        $(".JayNormal").hide();
+        $(".TextBox2").fadeIn();
+        $(".scrptC").hide();
+        $(".scrptN").hide();
+        $(".scrptB").hide();
+        $(".scrptN1").hide();
+        $(".scrptFF").show();
+        $(".TextBox1").hide();
+        $(".TextBox").hide();
+        $(".TextBox3").hide();
+        $(".TextBox4").hide();   
 
         }
   
