@@ -16,10 +16,8 @@
         <script src="/path/to/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-        <script>
-
-
-        </script>
+        <link rel="stylesheet" href="https://use.typekit.net/wie0gwd.css">
+        <link rel="stylesheet" href="https://use.typekit.net/wie0gwd.css">
     </head>
     <body>
 
@@ -122,7 +120,7 @@
                 <img src="Image/Q1.png">
             </div>
             <div class="itext">
-                <h4>Paper 1</h4><h5>Ripped piece of Paper found inside the book </h5>
+                <h4>Paper 1</h4><h5>Ripped piece of Paper </h5>
             </div>
         </div>
         <div id="paper2" class="inv">
@@ -130,7 +128,7 @@
                 <img src="Image/Q2.png">
             </div>
             <div class="itext">
-                <h4>Paper 2</h4><h5>Ripped piece of Paper found inside the book </h5>
+                <h4>Paper 2</h4><h5>Ripped piece of Paper </h5>
             </div>
         </div>
         <div id="paper3" class="inv">
@@ -138,7 +136,7 @@
                 <img src="Image/Q3.png">
             </div>
             <div class="itext">
-                <h4>Paper 3</h4><h5>Ripped piece of Paper found inside the book </h5>
+                <h4>Paper 3</h4><h5>Ripped piece of Paper  </h5>
             </div>
         </div>
         <div id="paper4" class="inv">
@@ -146,7 +144,7 @@
                 <img src="Image/Q4.png">
             </div>
             <div class="itext">
-                <h4>Paper 4</h4><h5>Ripped piece of Paper found behind the newspaper </h5>
+                <h4>Paper 4</h4><h5>Ripped piece of Paper  </h5>
             </div>
         </div>
         <div id="paper5" class="inv">
@@ -154,7 +152,7 @@
                 <img src="Image/Q5.png">
             </div>
             <div class="itext">
-                <h4>Paper 5</h4><h5>Ripped piece of Paper found inside the book </h5>
+                <h4>Paper 5</h4><h5>Ripped piece of Paper </h5>
             </div>
         </div>
         
@@ -189,9 +187,7 @@
 </div>
 
 
-
 <div class= "TextBox">
-    <div id="name"><h1>Journalist J</h1></div>
     <div class="textback"><img src="Image/quill.png"></div>
     <div id="Tbody">
         <p class="scrpt" id="scrpt_"> Nothing is here. </p>
@@ -202,8 +198,7 @@
 
 
 
-<div class= "TextBox1"> 
-    <div id="name"><h1>Journalist J</h1></div>     
+<div class= "TextBox1">  
     <div id="Tbody"> 
     <p class="scrptT"> Maybe I can type in this typewriter... </p>
     
@@ -212,7 +207,6 @@
     <p class="typing"></p> </div></div>
 
 <div class= "TextBox2">
-    <div id="name"><h1>Journalist J</h1></div>
     <div class="textback"><img src="Image/quill.png"></div>
     <div id="Tbody">
         <p class="scrptB"> Something is inside of this book... </p>
@@ -226,7 +220,6 @@
 </div>
 
 <div class= "TextBox3">
-    <div id="name"><h1>Journalist J</h1></div>
     <div class="textback"><img src="Image/quill.png"></div>
     <div id="Tbody">
         <p class="scrptW"> I need to move to see this side of the room. </p>
@@ -238,15 +231,16 @@
 
 
 <div class= "TextBox4">
-    <div id="name"><h1>Journalist J</h1></div>
     <div id="Tbody">
         <p class="scrptK"> ...Something came out. </p>
         <p class="scrptNo"> Well, maybe this is not a correct answer. </p>
         <p class="scrptQNo"> Nothing is special with this page... </p>
-        <p class="scrptQYes"> 'Nothing is a waste of time if you use the experience wisely. – Auguste Rodin' </p>
+        <p class="scrptQYes"> 'Nothing is a waste of time if you use the experience wisely. – <em>Auguste Rodin</em>' </p>
         <p class="typing"></p> 
     </div>
 </div>
+
+<div id="name"><h1>Journalist J</h1></div>
 
 <div class= "type" id="#type">
 	<div class="answer"></div>
@@ -264,17 +258,20 @@ function func() {
 
         $(".JayCarter").fadeIn();
         $(".TextBox4").fadeIn();
+        $("#name").fadeIn();
         $(".scrptK").hide();
         $(".scrptNo").show();
         $(".scrptQNo").hide();
         $(".scrptQYes").hide()
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
 	}
 	else if(answer == "nothing"){
         $("#key").show();
         $(".type").fadeOut();
+        $("#name").fadeIn();
         $(".JayCarter").fadeIn();
         $(".TextBox4").fadeIn();
         $(".scrptK").show();
@@ -283,12 +280,14 @@ function func() {
         $(".scrptQYes").hide();
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
         
 	}
     else if(answer == "Nothing"){
         $("#key").show();
         $(".type").fadeOut();
+        $("#name").fadeIn();
         $(".JayCarter").fadeIn();
         $(".TextBox4").fadeIn();
         $(".scrptK").show();
@@ -297,6 +296,7 @@ function func() {
         $(".scrptQYes").hide();
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
         
 	}
@@ -305,6 +305,7 @@ function func() {
 
         $(".JayCarter").fadeIn();
         $(".TextBox4").fadeIn();
+        $("#name").fadeIn();
         $(".scrptK").hide();
         $(".scrptNo").show();
         $(".scrptQNo").hide();
@@ -312,6 +313,7 @@ function func() {
         
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
 	}
 }
@@ -333,6 +335,7 @@ function func1() {
 	let answer1 = document.getElementById('answer1').value;
 	if(answer1 == ""){
         $(".JayCarter").fadeIn();
+        $("#name").fadeIn();
         $(".TextBox4").fadeIn();
         $(".scrptK").hide();
         $(".scrptNo").hide();
@@ -341,11 +344,13 @@ function func1() {
         
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
 	}
 	else if(answer1 == "51"){
         $(".type1").fadeOut();
         $(".JayCarter").fadeIn();
+        $("#name").fadeIn();
         $(".TextBox4").fadeIn();
         $(".scrptK").hide();
         $(".scrptNo").hide();
@@ -354,6 +359,7 @@ function func1() {
         
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
  
         
@@ -365,10 +371,12 @@ function func1() {
         $(".scrptK").hide();
         $(".scrptNo").hide();
         $(".scrptQNo").show();
+        $("#name").fadeIn();
         $(".scrptQYes").hide()
         
         $(".TextBox4").click(function(){
             $(".JayCarter").hide();
+            $("#name").hide();
             $(".TextBox4").hide();});
 	}
 }
@@ -378,8 +386,14 @@ function func1() {
 </script> </div>
     </script> </div>
 
-
-<div class="Info"></div>
+<div class="startp">
+    <div class="II"><img src="Image/Info.png"></div> 
+    <div class="Info">
+        <div class="play" id="bt"><h3>Play</h3></div> 
+        <div class="HowTo"id="bt"><h3>How To</h3></div>
+    </div>
+    <div><h2><em>ES</em>CAPE</h2></div>
+</div>
 
 
 

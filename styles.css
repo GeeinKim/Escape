@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -35,6 +37,23 @@ html{cursor: url(Image/cursor.png), auto}
 }
 
 
+h3{
+    font-family: superior-title, serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+h1{
+    font-family: superior-title, serif;
+    font-weight: 700;
+    font-style: italic;
+}
+h2{
+    font-family: superior-title, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow:    0 0 20px 5px hsla(0, 0%, 100%, 0.137)
+}
 
 .key{
     width: 150px;
@@ -138,6 +157,97 @@ html{cursor: url(Image/cursor.png), auto}
     position:fixed;
 }
 
+.startp{   
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    z-index: 58;
+    background-color: #00000069;
+}
+
+.startp h2{
+    font-size:380px;
+    color:#ffffff0e;
+text-align:center;
+}
+
+.Info{
+    height: 40%;
+    width: 40%;
+    bottom:25%;
+    right: 30%;
+    position:fixed;
+    z-index: 59;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#bt{
+    height: 10%;
+    width: 20%;
+    position:fixed;
+    z-index: 60;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 4.5px solid #202020;
+    background-color: #202020f3;
+    font-size: 24px;
+    text-align:center;
+    box-shadow:    0 0 40px 8px hsla(0, 0%, 100%, 0.082);
+    border-radius: 10px;
+    color:rgb(179, 179, 179);
+
+}
+
+p{
+    font-family: source-sans-pro, sans-serif;
+
+    font-weight: 400;
+    
+    font-style: normal;}
+
+
+
+
+#bt h3{
+    padding-top: 6.5%;
+}
+
+#bt:hover{
+    height: 10%;
+    width: 20%;
+    position:fixed;
+    z-index: 101;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 4.5px solid #202020;
+    background-color: #202020b9;
+    box-shadow:    0 0 40px 8px hsla(0, 0%, 100%, 0.082);
+
+}
+
+.play{
+    Top:64%;
+    left: 40%;
+}
+
+.HowTo{
+    bottom:12%;
+    left: 40%;
+}
+
+.II{
+    background-color:transparent;
+    height: 500px;
+    width: 500px;
+    left: 32.5%;
+    top: 35%;
+    position:fixed;
+    z-index:70;
+}
+
+
 .bookPile1{
     height: 15%;
     width: 15%;
@@ -219,34 +329,34 @@ html{cursor: url(Image/cursor.png), auto}
 }
 
 
-.TextBox{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    display: none;
-  }
   
 #name {
-    height:35%;
+    height:80px;
+    width:280px;
     box-sizing: border-box;
-    background-color: rgba(107, 107, 107, 0.726);
+    background: linear-gradient(#202020, #252525e8,#252525e8,#252525e8,#202020);
+    border-radius: 10px;
+    left:6.5%;
+    top: calc(100% - 240px);
+    text-align: center;
+    position:fixed;
+    color:rgb(179, 179, 179);
+    box-shadow:    0 0 40px 8px hsla(0, 0%, 100%, 0.082);
+    z-index: 3;
+
     } 
 
 #name h1 {
     font-size: 32px; 
-    float: left;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 15px;
     box-sizing: border-box;
     } 
 
 #Tbody {    height: calc(50%);
     width: 100%; 
-    margin-top: 25px;
-    margin-left: 20px;
-    padding-top: 10px;
+    margin-top: 65px;
+    margin-left: 3%;
+    padding-top: 15px;
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 25px;
@@ -269,12 +379,13 @@ html{cursor: url(Image/cursor.png), auto}
     margin-bottom: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    border: 3px solid #000000;
-    background-color: rgba(189, 189, 189, 0.623);
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
     position:fixed;
     bottom:0;
-    color: rgb(0, 0, 0);
+    color: #202020;
     font-size: 64px;
+    border-radius: 10px;
 }
 
 .TextBox1{
@@ -283,12 +394,13 @@ html{cursor: url(Image/cursor.png), auto}
     margin-bottom: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    border: 3px solid #000000;
-    background-color: rgba(189, 189, 189, 0.623);
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
     position:fixed;
     bottom:0;
-    color: rgb(0, 0, 0);
+    color: #202020;
     font-size: 64px;
+    border-radius: 10px;
 }
 
 .TextBox2{
@@ -297,12 +409,13 @@ html{cursor: url(Image/cursor.png), auto}
     margin-bottom: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    border: 3px solid #000000;
-    background-color: rgba(189, 189, 189, 0.623);
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
     position:fixed;
     bottom:0;
-    color: rgb(0, 0, 0);
+    color: #202020;
     font-size: 64px;
+    border-radius: 10px;
 }
 
 .TextBox3{
@@ -311,12 +424,13 @@ html{cursor: url(Image/cursor.png), auto}
     margin-bottom: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    border: 3px solid #000000;
-    background-color: rgba(189, 189, 189, 0.623);
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
     position:fixed;
     bottom:0;
-    color: rgb(0, 0, 0);
+    color: #202020;
     font-size: 64px;
+    border-radius: 10px;
 }
 
 .TextBox4{
@@ -325,20 +439,22 @@ html{cursor: url(Image/cursor.png), auto}
     margin-bottom: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    border: 3px solid #000000;
-    background-color: rgba(189, 189, 189, 0.623);
+    border: 3px solid #00000073;
+    background-color: rgba(156, 156, 156, 0.801);
     position:fixed;
     bottom:0;
-    color: rgb(0, 0, 0);
+    color: #202020;
     font-size: 64px;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 .textback{
     height: 100px;
     width: 100px;
     position:fixed;
-    bottom:5%;
-    right:7%; 
+    bottom:3%;
+    right:9.5%; 
     cursor: pointer;
     animation-name:waa;
     animation-duration: 1s; /*지속시간 */
@@ -444,7 +560,7 @@ html{cursor: url(Image/cursor.png), auto}
 
 .inventory_B{
     border-radius: 10px;
-    background-color: rgba(189, 189, 189, 0.911);
+    background-color: rgba(156, 156, 156, 0.801);
     height: 150px;
     width: 150px;
     top:5%;
@@ -454,6 +570,7 @@ html{cursor: url(Image/cursor.png), auto}
     cursor: pointer;
     border: 3px solid #202020;
     border-radius: 10px;
+    z-index:10;
 }
 
 .inventory_B img{
@@ -476,7 +593,7 @@ html{cursor: url(Image/cursor.png), auto}
     width: 350px;
     border: 3px solid #202020;
     border-radius: 10px;
-    background-color: rgba(221, 221, 221, 0.911);
+    background-color: rgba(156, 156, 156, 0.801);
     padding: 10px;
     box-sizing: border-box;
     position:fixed;
@@ -571,8 +688,8 @@ html{cursor: url(Image/cursor.png), auto}
     height: 100px;
     width: 100px;
     position:fixed;
-    bottom:5%;
-    right:7%; 
+    bottom:3%;
+    right:9.5%; 
     cursor: pointer;
     animation-name:waa;
     animation-duration: 1s; /*지속시간 */

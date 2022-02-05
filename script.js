@@ -24,6 +24,7 @@ $(document).ready(function(){
 // }  
       
     /*웹페이지 열었을 때*/
+    $(".II").hide();
 
     $(".Background1").show();
     $(".bookPile1").show();
@@ -34,14 +35,18 @@ $(document).ready(function(){
     $(".bookPile6").show();
     $(".bookPile7").show();
 
+    $(".inventory_B").hide();
+
     $(".recordPlayer").hide();
     $(".puzzle").hide();
+
+    $("#name").hide();
 
     $(".QuoteBook").show();
 
     $(".Background2").hide();
     $(".Arrow1").hide();
-    $(".Arrow2").show();
+    $(".Arrow2").hide();
     $(".JayCarter").hide();
     $(".TextBox").hide();
     $(".TextBox1").hide();
@@ -89,15 +94,32 @@ $(document).ready(function(){
 
     $(".carpet").show();
 
+    $(".play").click(function(){
+  
+        $(".startp").fadeOut(1000);
+        $(".Info").hide();
+        $(".Arrow2").fadeIn(1000);
+        $(".inventory_B").fadeIn(1000);
+    });
 
+    $(".HowTo").click(function(){
+  
+        $(".II").show();
+    });
+
+    $(".II").click(function(){
+  
+        $(".II").hide();
+    });
 
     $(".bookPile").click(function(){
         var audio = new Audio('sound/bookPile.mp3');
         audio.play();
         $(".JayCarter").fadeIn();
         $(".TextBox3").fadeIn();
-        $(".Jay_1").hide();
-        $(".Jay").show();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
+        $("#name").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
         $(".TextBox").hide();
@@ -117,6 +139,9 @@ $(document).ready(function(){
         var audio = new Audio('sound/fire.mp3');
         audio.play();
         $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
+        $("#name").fadeIn();
         $(".TextBox3").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
@@ -131,6 +156,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
+        $("#name").fadeIn();
         $(".TextBox").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
@@ -225,6 +251,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox").fadeIn();
         $(".scrpt").hide();
         $(".scrptT").hide();
@@ -239,6 +266,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
+        $("#name").fadeIn();
         $(".TextBox3").fadeIn();
         $(".scrpt_fire").hide();
         $(".scrpt_bookPile1").hide();
@@ -252,9 +280,12 @@ $(document).ready(function(){
 
 
     $(".typewriter").click(function(){
+        var audio = new Audio('sound/typewriter.mp3');
+        audio.play();
         $(".JayCarter").fadeIn();
         $(".JayNormal").hide();
         $(".JayBack").show();
+        $("#name").fadeIn();
         $(".TextBox1").fadeIn();
         $(".scrptT").show();
         $(".scrptQB").hide();
@@ -269,6 +300,7 @@ $(document).ready(function(){
             $(".type1").hide();
             $(".JayCarter").hide();
             $(".TextBox1").hide();
+            $("#name").hide();
         });
     });
 
@@ -276,9 +308,12 @@ $(document).ready(function(){
 
     
     $(".QuoteBook").click(function(){
+        var audio = new Audio('sound/Paper2.mp3');
+        audio.play();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox1").fadeIn();
         $(".TextBox").hide();
         $(".TextBox2").hide();
@@ -292,6 +327,7 @@ $(document).ready(function(){
             $(".type").hide();
             $(".JayCarter").hide();
             $(".TextBox1").hide();
+            $("#name").hide();
         });
     });
 
@@ -307,6 +343,7 @@ $(document).ready(function(){
         $(".TextBox2").hide();
         $(".TextBox3").hide();
         $(".TextBox4").hide();
+        $("#name").hide();
         $(".type").hide();
         $(".type1").hide();
     });
@@ -319,6 +356,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();
         $(".scrptN").hide();
@@ -339,6 +377,7 @@ $(document).ready(function(){
         $(".book2").remove();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
+        $("#name").fadeIn();
         $(".JayNormal").hide();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();
@@ -432,6 +471,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox").hide();
@@ -445,6 +485,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".scrptC").show();
         $(".scrptN").hide();
@@ -464,6 +505,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();       
         $(".scrptB").hide();
@@ -483,6 +525,7 @@ $(document).ready(function(){
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();       
         $(".scrptB").hide();
@@ -540,6 +583,7 @@ $( function() {
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
+        $("#name").fadeIn();
         $(".TextBox2").fadeIn();
         $(".scrptC").hide();
         $(".scrptN").hide();
