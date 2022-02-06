@@ -594,9 +594,9 @@ $( function() {
         $(".TextBox3").hide();
         $(".TextBox4").hide();
         $(".TextBox5").click(function(){
-          $(".end").fadeIn(2000);});
+          $(".end").fadeIn(1500);});
         $(".JayCarter").click(function(){
-            $(".end").fadeIn(2000);}
+            $(".end").fadeIn(1500);}
         )}
   
 });
