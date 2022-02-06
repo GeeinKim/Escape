@@ -96,7 +96,6 @@ $(document).ready(function(){
     $(".carpet").show();
 
     $(".play").click(function(){
-  
         $(".startp").fadeOut(1000);
         $(".Info").hide();
         $(".Arrow2").fadeIn(1000);
@@ -104,9 +103,11 @@ $(document).ready(function(){
     });
 
     $(".HowTo").click(function(){
-  
+        var audio = new Audio('sound/Paper2.mp3');
+        audio.play();
         $(".II").show();
     });
+
 
     $(".II").click(function(){
   
@@ -582,6 +583,8 @@ $( function() {
     );
     $( ".door" ).droppable({
       drop: function( event, ui ) {
+        var audio = new Audio('sound/dooropenning.mp3');
+        audio.play();
 
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
@@ -594,9 +597,14 @@ $( function() {
         $(".TextBox3").hide();
         $(".TextBox4").hide();
         $(".TextBox5").click(function(){
-          $(".end").fadeIn(1500);});
+          $(".end").fadeIn(1500);
+          var audio = new Audio('sound/end.mp3');
+          audio.play();});
+          
         $(".JayCarter").click(function(){
-            $(".end").fadeIn(1500);}
+            $(".end").fadeIn(1500);
+            var audio = new Audio('sound/end.mp3');
+            audio.play();}
         )}
   
 });
