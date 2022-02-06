@@ -42,9 +42,13 @@ html{cursor: url(Image/cursor.png), auto}
     background-color: #000;
     z-index: 200;
     position: fixed;
-    color:#888;
 }
 
+.cong{
+    color:rgb(204, 204, 204);
+    position:fixed;
+    z-index:201;
+}
 
 .end img{
     width:100%;
@@ -202,7 +206,7 @@ text-align:center;
     height: 40%;
     width: 40%;
     bottom:5%;
-    right: 2.5%;
+    right: 10%;
     position:fixed;
     z-index: 59;
     border-radius: 10px;
