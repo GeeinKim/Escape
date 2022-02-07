@@ -251,8 +251,8 @@ p{
 }
 
 #bt:hover{
-    height: 100px;
-    width: 400px;
+    height: 70px;
+    width: 250px;
     position:fixed;
     z-index: 101;
     border-radius: 10px;
