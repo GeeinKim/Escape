@@ -40,6 +40,16 @@ html{cursor: url(Image/cursor.png), auto}
     width:100%;
     height: 100%;
 }
+.Background1{
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.Background2{
+    height: 100%;
+    object-fit: cover;
+}
 
 .end{
     width: 100%;
@@ -190,7 +200,7 @@ h2{
 }
 
 .startp h2{
-    font-size:380px;
+    font-size:19.79vw;
     color:#ffffff0e;
 text-align:center;
 }
@@ -220,8 +230,8 @@ text-align:center;
 }
 
 #bt{
-    height: 70px;
-    width: 250px;
+    height: 7.6vh;
+    width: 15.625vw;
     position:fixed;
     z-index: 60;
     border-radius: 10px;
@@ -251,8 +261,8 @@ p{
 }
 
 #bt:hover{
-    height: 70px;
-    width: 250px;
+    height: 7.6vh;
+    width: 15.625vw;
     position:fixed;
     z-index: 101;
     border-radius: 10px;
@@ -874,11 +884,6 @@ img{
         right:0; 
         cursor: pointer;}
 
-    .startp h2{
-        font-size:100%;
-        color:#ffffff0e;
-    text-align:center;
-    }
 
     .startp{   
         height: 100%;
@@ -888,11 +893,7 @@ img{
         background-color: #00000069;
     }
     
-    .startp h2{
-        font-size:380px;
-        color:#ffffff0e;
-    text-align:center;
-    }
+
     
     .Info{
         height: 40%;
