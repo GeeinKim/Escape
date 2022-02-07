@@ -344,6 +344,37 @@ $(document).ready(function(){
         });
     });
 
+    $(".TextBox").click(function(){
+        $(".TextBox").hide();
+        $("#name").hide();
+        $(".JayCarter").hide();
+    });
+
+    $(".TextBox2").click(function(){
+        $(".TextBox2").hide();
+        $("#name").hide();
+        $(".JayCarter").hide();
+    });
+
+    $(".TextBox3").click(function(){
+        $(".TextBox3").hide();
+        $("#name").hide();
+        $(".JayCarter").hide();
+    });
+
+    $(".TextBox4").click(function(){
+        $(".TextBox4").hide();
+        $("#name").hide();
+        $(".JayCarter").hide();
+    });
+
+    $(".TextBox5").click(function(){
+        $(".TextBox5").hide();
+        $("#name").hide();
+        $(".JayCarter").hide();
+    });
+
+
 
     $(".typeback").click(function(){
         $(".type").hide();
