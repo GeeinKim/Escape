@@ -553,6 +553,15 @@ p{
     cursor: pointer;
 }
 
+.recordPlayer1{
+    height: 15%;
+    width: 19%;
+    top:25%;
+    left:50%;
+    position:fixed;
+    cursor: pointer;
+}
+
 .Arrow1{
     height: 70px;
     margin: 20px;
@@ -1027,3 +1036,7 @@ img{
     }
 
 }
+
+
+
+

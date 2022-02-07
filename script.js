@@ -24,6 +24,22 @@ $(document).ready(function(){
 // }  
       
     /*웹페이지 열었을 때*/
+
+    function isEmpty(value){
+
+        if(value == null || value.length === 0) {
+    
+               return "";
+    
+         } else{
+    
+                return value;
+    
+         }
+    
+    }
+
+
     $(".II").hide();
     $(".end").hide();
     $(".Background1").show();
@@ -38,6 +54,8 @@ $(document).ready(function(){
     $(".inventory_B").hide();
 
     $(".recordPlayer").hide();
+    
+    $(".recordPlayer1").hide();
     $(".puzzle").hide();
 
     $("#name").hide();
@@ -137,10 +155,19 @@ $(document).ready(function(){
     });
 
     $(".recordPlayer").click(function(){
-        var audio = new Audio('sound/LaBoheme.mp3');
+        const audio = document.querySelector("#audio");
         audio.play();
         $(".recordPlayer").hide();
+        $(".recordPlayer1").show();
     });
+
+    $(".recordPlayer1").click(function(){
+        const audio = document.querySelector("#audio");
+        audio.pause();
+        $(".recordPlayer").show();
+        $(".recordPlayer1").hide();
+    });
+
 
     $(".fireplaceHand").click(function(){
         var audio = new Audio('sound/fire.mp3');
@@ -174,6 +201,9 @@ $(document).ready(function(){
         $(".scrptlocked").hide();
         $(".scrptT").hide();
         $(".scrpt").show();
+
+
+setInterval(typing, 200)
     });
 
     $(".Arrow2").click(function(){
@@ -222,6 +252,7 @@ $(document).ready(function(){
 
         $(".recordPlayer").hide();
         
+    $(".recordPlayer1").hide();
          $(".carpet").show();
 
         $(".bookPile1").show();
@@ -390,6 +421,10 @@ $(document).ready(function(){
         $("#name").hide();
         $(".type").hide();
         $(".type1").hide();
+        if (i > content.length) {
+            text.textContent = "";
+            i = 0;
+        }
     });
 
     $(".book1").click(function(){
