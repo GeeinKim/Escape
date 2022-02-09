@@ -562,6 +562,7 @@ $(document).ready(function(){
     $("#key").click(function(){
         $(".key").show();
         $(".itemBack").show();
+        $(".door").show();
     });
 
     $("#glassbottle").click(function(){
@@ -588,6 +589,7 @@ $(document).ready(function(){
 
     $(".itemBack").click(function(){
         $("#item").fadeOut();
+        $(".all").show();
         $(".key").fadeOut();
         $(".paper1").fadeOut();
         $(".paper2").fadeOut();
@@ -716,6 +718,7 @@ $( function() {
       drop: function( event, ui ) {
         var audio = new Audio('sound/dooropenning.mp3');
         audio.play();
+        $(".all").hide();
 
         const content = "...!";
         const text = document.querySelector(".text");
