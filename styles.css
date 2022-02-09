@@ -330,7 +330,7 @@ text-align:center;
 
 #bt:hover{
     height: 75px;
-    width: 15.625vw;
+    width: 22vw;
     position:fixed;
     z-index: 101;
     border-radius: 10px;
@@ -348,7 +348,7 @@ text-align:center;
 }
 
 .HowTo{
-    bottom:12%;
+    bottom:14.5%;
     left:50%;
     transform: translate(-50%,0);
 }
