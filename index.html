@@ -250,6 +250,8 @@ function func() {
 	}
 	else if(answer == "nothing"){
         $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
+        var audio = new Audio('sound/key.mp3');
+        audio.play();
         $("#key").show();
         $(".type").fadeOut();
         $("#name").fadeIn();
