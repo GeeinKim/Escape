@@ -718,7 +718,7 @@ $( function() {
       drop: function( event, ui ) {
         var audio = new Audio('sound/dooropenning.mp3');
         audio.play();
-        $(".all").hide();
+                $(".all").hide();
 
         const content = "...!";
         const text = document.querySelector(".text");
