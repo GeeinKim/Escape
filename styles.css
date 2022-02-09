@@ -141,7 +141,8 @@ h2{
   /*position: absolute;*/ 
     display: inline-block; 
     vertical-align: middle;
-    animation: steps(3);
+    height:35%;
+    animation: steps(2);
     animation-name: cursor; 
     animation-duration: 1.2s; 
     animation-iteration-count: infinite; 
