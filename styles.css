@@ -342,7 +342,7 @@ text-align:center;
 }
 
 .play{
-    Top:64%;
+    bottom:26%;
     left:50%;
     transform: translate(-50%,0);
 }
@@ -978,7 +978,7 @@ img{
     
     #bt{
         height: 70px;
-        width: 200px;
+        width: 210px;
         position:fixed;
         z-index: 60;
         border-radius: 10px;
