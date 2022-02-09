@@ -33,29 +33,30 @@
             <div class= "Background2"><img id= "B2" src="Image/Background2.png"></div></div>
 
 <div class="all">
-    <div class= "objects"></div>
 
-    <div class= "door">  </div>
-    <div class= "fireplace" id="fireplace">  </div>
-    <div class= "fireplaceHand" id="fireplace">  </div>
+    <div class= "objects"></div>
+    <div class= "door"> </div>
+    <div class= "fireplace" id="fireplace"> </div>
+    <div class= "fireplaceHand" id="fireplace"> </div>
     <div class= "typewriter"></div>
     <div class= "book1" ></div>
     <div class= "book2" ></div>
-    <div class= "carpet" ></div>
+    <div class= "carpet"></div>
     <div class="newspaper" id="newspaper"></div>
     <div class="newspaper1"id="newspaper"></div>
     <div class="wall"></div>
     <div class="QuoteBook"></div>
 
-<div class="bookPile">
-    <div class="bookPile1"></div>
-    <div class="bookPile2"></div>
-    <div class="bookPile3"></div>
-    <div class="bookPile4"></div>
-    <div class="bookPile5"></div>
-    <div class="bookPile6"></div>
-    <div class="bookPile7"></div>
-</div>
+    <div class="bookPile">
+        <div class="bookPile1" id="bookPile"></div>
+        <div class="bookPile2"id="bookPile"></div>
+        <div class="bookPile3"id="bookPile"></div>
+        <div class="bookPile4"id="bookPile"></div>
+        <div class="bookPile5"id="bookPile"></div>
+        <div class="bookPile6"id="bookPile"></div>
+        <div class="bookPile7"id="bookPile"></div>
+    </div>
+
 </div>
 
 <div class="recordPlayer"></div>
@@ -204,6 +205,7 @@
     </div>
 </div>
 
+<div class="an"><h1>Found a new item!</h1><p>check your inventory</p></div>
 
 <div id="name"><h1>Journalist J</h1></div>
 
@@ -247,6 +249,7 @@ function func() {
             $(".TextBox").hide();});
 	}
 	else if(answer == "nothing"){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $("#key").show();
         $(".type").fadeOut();
         $("#name").fadeIn();
@@ -274,6 +277,7 @@ function func() {
         
 	}
     else if(answer == "Nothing"){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $("#key").show();
         $(".type").fadeOut();
         $("#name").fadeIn();

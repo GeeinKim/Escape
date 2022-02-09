@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     let myInterval 
+    $(".an").hide();
 
     $(".textback3").hide();
     $(".textback2").hide();
@@ -34,11 +35,6 @@ $(document).ready(function(){
     $(".Arrow2").hide();
     $(".JayCarter").hide();
     $(".TextBox").hide();
-    $(".TextBox1").hide();
-    $(".TextBox2").hide();
-    $(".TextBox3").hide();
-    $(".TextBox4").hide();
-    $(".TextBox5").hide();
     $(".type").hide();
     $(".type1").hide();
     $(".itemBack").hide();
@@ -107,13 +103,13 @@ $(document).ready(function(){
     $(".bookPile").click(function(){
         var audio = new Audio('sound/bookPile.mp3');
         audio.play();
+        $(".all").hide();
         $(".JayCarter").fadeIn();
         $(".TextBox").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
+        $(".bookPile").hide();
 
         const content = "It is not a good idea to read a book right now... ";
         const text = document.querySelector(".text");
@@ -151,15 +147,12 @@ $(document).ready(function(){
         var audio = new Audio('sound/fire.mp3');
         audio.play();
         $(".all").hide();
+        $("#bookPile").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
         $(".TextBox").fadeIn();
-        $(".TextBox1").hide();
-        $(".TextBox2").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
         const content = "I'm going to burn my hand if I reach there.";
         const text = document.querySelector(".text");
         let i = 0;
@@ -185,6 +178,7 @@ $(document).ready(function(){
         $("#name").fadeIn();
         $(".TextBox").fadeIn();
         $(".all").hide();
+        $("#bookPile").hide();
 
 
         const content = "Nothing is here.";
@@ -292,6 +286,7 @@ $(document).ready(function(){
         var audio = new Audio('sound/door.mp3');
         audio.play();
         $(".all").hide();
+        $("#bookPile").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
@@ -318,6 +313,7 @@ $(document).ready(function(){
 
     $(".wall").click(function(){
         $(".all").hide();
+        $("#bookPile").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
@@ -345,6 +341,7 @@ $(document).ready(function(){
 
     $(".typewriter").click(function(){
         $(".all").hide();
+        $("#bookPile").hide();
         var audio = new Audio('sound/typewriter.mp3');
         audio.play();
           
@@ -380,6 +377,7 @@ $(document).ready(function(){
             $(".textback1").hide();
             $(".textback").show();
             $(".all").show();
+            $("#bookPile").show();
         });
         
     });
@@ -389,6 +387,7 @@ $(document).ready(function(){
     
     $(".QuoteBook").click(function(){
         $(".all").hide();
+        $("#bookPile").hide();
         var audio = new Audio('sound/Paper2.mp3');
         audio.play();
 
@@ -435,6 +434,7 @@ $(document).ready(function(){
         $(".text").empty()
         console.log($(".text"))
         $(".all").show();
+        $("#bookPile").show();
     });
 
 
@@ -443,6 +443,8 @@ $(document).ready(function(){
         $(".type").hide();
         $(".type1").hide();
         $(".all").show();
+        $("#bookPile").show();
+        $(".an").hide();
     });
 
     $(".textback").click(function(){
@@ -455,10 +457,14 @@ $(document).ready(function(){
         $(".text").empty()
         console.log($(".text"))
         $(".all").show();
+        $("#bookPile").show();
+        $(".an").hide();
     });
 
     $(".book1").click(function(){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $(".all").hide();
+        $("#bookPile").hide();
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper1").show();
@@ -490,7 +496,9 @@ $(document).ready(function(){
     });
 
     $(".book2").click(function(){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $(".all").hide();
+        $("#bookPile").hide();
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper2").show();
@@ -557,6 +565,7 @@ $(document).ready(function(){
     });
 
     $("#glassbottle").click(function(){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $("#paper3").show();
         $("#glassbottle").hide();
         $("#glassbottleopen").show();
@@ -597,7 +606,9 @@ $(document).ready(function(){
 
 
     $(".carpet").click(function(){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $(".all").hide();
+        $("#bookPile").hide();
         $("#paper5").show();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
@@ -627,6 +638,7 @@ $(document).ready(function(){
 
     $(".newspaper").click(function(){
         $(".all").hide();
+        $("#bookPile").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
@@ -657,15 +669,15 @@ $(document).ready(function(){
 
     
     $(".newspaper1").click(function(){
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $(".all").hide();
+        $("#bookPile").hide();
         $("#paper4").show();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
         $(".TextBox").fadeIn();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
         $(".newspaper1").remove();
 
         const content = " Wait, I can feel something is behind...";
@@ -725,7 +737,6 @@ $( function() {
         $(".JayNormal").show();
         $("#name").fadeIn();
         $(".TextBox").fadeIn();
-        $(".TextBox4").hide();
         $(".textback").hide();
         $(".textback2").show();
         $(".textback2").click(function(){
@@ -752,6 +763,7 @@ $( function() {
     );
     $( ".fireplace" ).droppable({
       drop: function( event, ui ) {
+        $(".an").fadeIn(1000, function() { $(".an").fadeOut(1500)});
         $("#glassbottle").show();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();

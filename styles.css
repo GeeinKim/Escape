@@ -69,6 +69,8 @@ html{cursor: url(Image/cursor.png), auto}
     position: fixed;
 }
 
+
+
 .cong{
     color:rgb(204, 204, 204);
     position:fixed;
@@ -284,6 +286,34 @@ text-align:center;
 
 }
 
+.an{
+    height: 120px;
+    width: 20vw;
+    position:fixed;
+    z-index: 60;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 4.5px solid #202020;
+    background-color: #202020f3;
+    font-size: 24px;
+    text-align:center;
+    border-radius: 10px;
+    color:rgb(179, 179, 179);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.an h1{
+    font-size: 2vw;
+    margin-top: 20px;
+}
+
+.an p{
+    font-size: 1.1vw;
+    margin-top: -7px;
+}
+
 .text{
     font-family: source-sans-pro, sans-serif;
 
@@ -313,12 +343,14 @@ text-align:center;
 
 .play{
     Top:64%;
-    left: 40%;
+    left:50%;
+    transform: translate(-50%,0);
 }
 
 .HowTo{
     bottom:12%;
-    left: 40%;
+    left:50%;
+    transform: translate(-50%,0);
 }
 
 .II{
@@ -340,6 +372,7 @@ text-align:center;
     left:9.5%;
     position:fixed;
     transform: rotate(-20deg) skew(-20deg);
+    
 }
 
 .bookPile2{
@@ -987,16 +1020,6 @@ img{
     
     }
     
-    .play{
-        Top:64%;
-        left: 40%;
-    }
-    
-    .HowTo{
-        bottom:12%;
-        left: 40%;
-    }
-
     .Background{
         height: 100%;
         width: 100%;
@@ -1007,49 +1030,6 @@ img{
         z-index: -10;
         object-fit: cover;
     }
-}
-
-@media screen and (max-width: 760px) {
-    .play{
-        Top:64%;
-        left: 35%;
-    }
-    
-    .HowTo{
-        bottom:12%;
-        left: 35%;
-    }
-
-
-}
-
-
-@media screen and (max-width: 500px) {
-
-    .play{
-        Top:64%;
-        left: 27.5%;
-    }
-    
-    .HowTo{
-        bottom:12%;
-        left: 27.5%;
-    }
-
-}
-
-@media screen and (max-width: 310px) {
-
-    .play{
-        Top:64%;
-        left: 20%;
-    }
-    
-    .HowTo{
-        bottom:12%;
-        left: 20%;
-    }
-
 }
 
 
