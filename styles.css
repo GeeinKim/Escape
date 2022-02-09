@@ -36,6 +36,16 @@ html{cursor: url(Image/cursor.png), auto}
     cursor: pointer;
 }
 
+
+.objects{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -5;
+    position: fixed;
+
+}
+
 .Background{
     width:100%;
     height: 100%;
@@ -114,6 +124,7 @@ h2{
     background-color: rgba(221, 221, 221, 0.911);
     align-items: center;
     cursor: pointer;
+    z-index: 2;
 }
 
 .itemBack h3{
@@ -159,6 +170,14 @@ h2{
 }
 
 .newspaper{
+    height: 40%;
+    width: 25%;
+    top:13%;
+    left:1%;
+    position:fixed;
+}
+
+.newspaper1{
     height: 40%;
     width: 25%;
     top:13%;
@@ -230,7 +249,7 @@ text-align:center;
 }
 
 #bt{
-    height: 7.6vh;
+    height: 75px;
     width: 15.625vw;
     position:fixed;
     z-index: 60;
@@ -246,7 +265,7 @@ text-align:center;
 
 }
 
-p{
+.text{
     font-family: source-sans-pro, sans-serif;
 
     font-weight: 400;
@@ -261,7 +280,7 @@ p{
 }
 
 #bt:hover{
-    height: 7.6vh;
+    height: 75px;
     width: 15.625vw;
     position:fixed;
     z-index: 101;
@@ -287,10 +306,11 @@ p{
     background-color:transparent;
     height: 500px;
     width: 500px;
-    left: 35%;
-    top: 35%;
+    left: 32.5%;
+    top: 25%;
     position:fixed;
     z-index:70;
+    transform: scale(1.5);
 }
 
 
@@ -388,7 +408,7 @@ p{
     position:fixed;
     color:rgb(179, 179, 179);
     box-shadow:    0 0 40px 8px hsla(0, 0%, 100%, 0.082);
-    z-index: 3;
+    z-index: 9;
 
     } 
 
@@ -417,6 +437,7 @@ p{
     right: 7%;
     color: white;
     font-size: 64px;
+    z-index: 8;
 }
 
 .TextBox{
@@ -432,84 +453,54 @@ p{
     color: #202020;
     font-size: 64px;
     border-radius: 10px;
+    z-index: 8;
 }
 
-.TextBox1{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 3px solid #00000073;
-    background-color: rgba(156, 156, 156, 0.801);
-    position:fixed;
-    bottom:0;
-    color: #202020;
-    font-size: 64px;
-    border-radius: 10px;
-}
 
-.TextBox2{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 3px solid #00000073;
-    background-color: rgba(156, 156, 156, 0.801);
+.textback3{
+    height: 100px;
+    width: 100px;
     position:fixed;
-    bottom:0;
-    color: #202020;
-    font-size: 64px;
-    border-radius: 10px;
-}
+    bottom:3%;
+    right:9.5%; 
+    cursor: pointer;
+    animation-name:waa;
+    animation-duration: 1s; /*지속시간 */
+	animation-timing-function: ease-out;
+	animation-delay: 0s; /* 애니메이션 시작하기까지 */
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;}
 
-.TextBox3{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 3px solid #00000073;
-    background-color: rgba(156, 156, 156, 0.801);
+.textback2{
+    height: 100px;
+    width: 100px;
     position:fixed;
-    bottom:0;
-    color: #202020;
-    font-size: 64px;
-    border-radius: 10px;
-}
+    bottom:3%;
+    right:9.5%; 
+    cursor: pointer;
+    animation-name:waa;
+    animation-duration: 1s; /*지속시간 */
+	animation-timing-function: ease-out;
+	animation-delay: 0s; /* 애니메이션 시작하기까지 */
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;}
 
-.TextBox4{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 3px solid #00000073;
-    background-color: rgba(156, 156, 156, 0.801);
+.textback1{
+    height: 100px;
+    width: 100px;
     position:fixed;
-    bottom:0;
-    color: #202020;
-    font-size: 64px;
-    border-radius: 10px;
-    z-index: 2;
-}
-
-.TextBox5{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 3px solid #00000073;
-    background-color: rgba(156, 156, 156, 0.801);
-    position:fixed;
-    bottom:0;
-    color: #202020;
-    font-size: 64px;
-    border-radius: 10px;
-    z-index: 2;
-}
+    bottom:3%;
+    right:9.5%; 
+    cursor: pointer;
+    animation-name:waa;
+    animation-duration: 1s; /*지속시간 */
+	animation-timing-function: ease-out;
+	animation-delay: 0s; /* 애니메이션 시작하기까지 */
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;}
 
 .textback{
     height: 100px;
@@ -571,6 +562,7 @@ p{
     left:0%;
     opacity: 70%;
     cursor: pointer;
+    z-index: 7;
 
 }
 
@@ -594,6 +586,7 @@ p{
     right:0%;
     opacity: 85%;
     cursor: pointer;
+    z-index: 7;
 }
 
 .Arrow2:hover{
@@ -671,6 +664,7 @@ p{
     top:5%;
     left:5%;
     cursor: pointer;
+    z-index:10;
 }
 
 .inventory p{
@@ -753,6 +747,7 @@ p{
     position:fixed;
     top:42.5%;
     left:80%;
+    z-index: 2;
 }
 
 .typeback{
@@ -782,7 +777,7 @@ p{
 
 
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
 }
 
@@ -798,7 +793,7 @@ p{
 
 
     align-items: center;
-    z-index:1;
+    z-index:2;
     cursor: pointer;
 }
 
@@ -883,6 +878,7 @@ img{
         top:5%;
         left:5%;
         cursor: pointer;
+        z-index:10;
     }
 
     .textback{

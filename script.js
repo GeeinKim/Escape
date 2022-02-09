@@ -1,44 +1,11 @@
 $(document).ready(function(){
 
-//             // 타이핑될 텍스트를 가져온다 
-// var typingTxt = $(".Tbody").text(); 
-// typingBool=false;
-// typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+    let myInterval 
 
-// if(typingBool==false){ 
-//   // 타이핑이 진행되지 않았다면 
-//    typingBool=true;     
-//    var tyInt = setInterval(typing,70); // 반복동작 
-// } 
-     
-// function typing(){ 
-//   if(typingIdx<typingTxt.length){ 
-//     // 타이핑될 텍스트 길이만큼 반복 
-//     $(".typing").append(typingTxt[typingIdx]);
-//     // 한글자씩 이어준다. 
-//     typingIdx++; 
-//    } else{ 
-//      //끝나면 반복종료 
-//     clearInterval(tyInt);
-//    } 
-// }  
-      
-    /*웹페이지 열었을 때*/
-
-    function isEmpty(value){
-
-        if(value == null || value.length === 0) {
-    
-               return "";
-    
-         } else{
-    
-                return value;
-    
-         }
-    
-    }
-
+    $(".textback3").hide();
+    $(".textback2").hide();
+    $(".textback1").hide();
+    $(".textback").show();
 
     $(".II").hide();
     $(".end").hide();
@@ -76,7 +43,8 @@ $(document).ready(function(){
     $(".type1").hide();
     $(".itemBack").hide();
 
-    $(".newspaper").hide();
+    $("#newspaper").hide();
+    $(".newspaper1").hide();
 
     $(".inventory").hide();
     $("#paper1").hide();
@@ -140,18 +108,28 @@ $(document).ready(function(){
         var audio = new Audio('sound/bookPile.mp3');
         audio.play();
         $(".JayCarter").fadeIn();
-        $(".TextBox3").fadeIn();
+        $(".TextBox").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
-        $(".TextBox1").hide();
-        $(".TextBox2").hide();
-        $(".TextBox").hide();
         $(".TextBox4").hide();
         $(".TextBox5").hide();
-        $(".scrpt_bookPile1").show();
-        $(".scrptW").hide();
-        $(".scrpt_fire").hide();
+
+        const content = "It is not a good idea to read a book right now... ";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
     });
 
     $(".recordPlayer").click(function(){
@@ -172,22 +150,7 @@ $(document).ready(function(){
     $(".fireplaceHand").click(function(){
         var audio = new Audio('sound/fire.mp3');
         audio.play();
-        $(".JayCarter").fadeIn();
-        $(".JayBack").hide();
-        $(".JayNormal").show();
-        $("#name").fadeIn();
-        $(".TextBox3").fadeIn();
-        $(".TextBox1").hide();
-        $(".TextBox2").hide();
-        $(".TextBox").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
-        $(".scrpt_bookPile1").hide();
-        $(".scrptW").hide();
-        $(".scrpt_fire").show();
-    });
-  $(".objects").click(function(){
-  
+        $(".all").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
@@ -195,21 +158,59 @@ $(document).ready(function(){
         $(".TextBox").fadeIn();
         $(".TextBox1").hide();
         $(".TextBox2").hide();
-        $(".TextBox3").hide();
         $(".TextBox4").hide();
         $(".TextBox5").hide();
-        $(".scrptlocked").hide();
-        $(".scrptT").hide();
-        $(".scrpt").show();
+        const content = "I'm going to burn my hand if I reach there.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+    });
+
+  $(".objects").click(function(){
+  
+        $(".JayCarter").fadeIn();
+        $(".JayBack").hide();
+        $(".JayNormal").show();
+        $("#name").fadeIn();
+        $(".TextBox").fadeIn();
+        $(".all").hide();
 
 
-setInterval(typing, 200)
+        const content = "Nothing is here.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
+
+
     });
 
     $(".Arrow2").click(function(){
         $(".Background1").hide();
         $(".Background2").show();
-        $(".newspaper").show();
+        $("#newspaper").show();
         $(".Arrow2").hide();
         $(".Arrow1").show();
         $(".door").hide();
@@ -242,7 +243,7 @@ setInterval(typing, 200)
         
         $(".Background1").show();
         $(".Background2").hide();
-        $(".newspaper").hide();
+        $("#newspaper").hide();
         $(".Arrow2").show();
         $(".Arrow1").hide();
         $(".door").show();
@@ -268,6 +269,8 @@ setInterval(typing, 200)
         $(".QuoteBook").show();
         $("#cane").hide(); 
         $("#cane1").show();  
+
+        
     });
     
     
@@ -288,90 +291,139 @@ setInterval(typing, 200)
     $(".door").click(function(){
         var audio = new Audio('sound/door.mp3');
         audio.play();
+        $(".all").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
         $(".TextBox").fadeIn();
-        $(".scrpt").hide();
-        $(".scrptT").hide();
-        $(".scrptlocked").show();
-        $(".TextBox1").hide();
-        $(".TextBox2").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
+
+        const content = "It seems I need a key to open this...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
     });
 
     $(".wall").click(function(){
+        $(".all").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
-        $(".TextBox3").fadeIn();
-        $(".scrpt_fire").hide();
-        $(".scrpt_bookPile1").hide();
-        $(".scrptW").show();
-        $(".TextBox1").hide();
-        $(".TextBox2").hide();
-        $(".TextBox").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
+        $(".TextBox").fadeIn();
+
+        const content = "I need to move to see this side of the room.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
         
     });
 
 
     $(".typewriter").click(function(){
+        $(".all").hide();
         var audio = new Audio('sound/typewriter.mp3');
         audio.play();
+          
+        const content = "Maybe I can type in this typewriter...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
         $(".JayCarter").fadeIn();
-        $(".JayNormal").hide();
         $(".JayBack").show();
+        $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox1").fadeIn();
-        $(".scrptT").show();
-        $(".scrptQB").hide();
-        $(".scrptlocked").hide();
-        $("type1").hide();
-        $(".TextBox").hide();
-        $(".TextBox2").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
-        $(".TextBox1").click(function(){
+        $(".TextBox").fadeIn();
+        $(".textback1").show();
+        $(".textback").hide();
+        $(".textback1").click(function(){
             $(".type").fadeIn(1000);
             $(".type1").hide();
             $(".JayCarter").hide();
             $(".TextBox1").hide();
             $("#name").hide();
+            $(".textback1").hide();
+            $(".textback").show();
+            $(".all").show();
         });
+        
     });
 
 
 
     
     $(".QuoteBook").click(function(){
+        $(".all").hide();
         var audio = new Audio('sound/Paper2.mp3');
         audio.play();
+
+        const content = "Which page should I read?";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox1").fadeIn();
-        $(".TextBox").hide();
-        $(".TextBox2").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
-        $(".scrptT").hide();
-        $(".scrptQB").show();
-        $(".scrptlocked").hide();
-        $(".TextBox1").click(function(){
+        $(".TextBox").fadeIn();
+        $(".textback1").show();
+        $(".textback").hide();
+        $(".textback1").click(function(){
             $(".type1").fadeIn(1000);
             $(".type").hide();
             $(".JayCarter").hide();
             $(".TextBox1").hide();
             $("#name").hide();
+            $(".textback1").hide();
+            $(".textback").show();
+            $(".all").show();
         });
     });
 
@@ -379,30 +431,10 @@ setInterval(typing, 200)
         $(".TextBox").hide();
         $("#name").hide();
         $(".JayCarter").hide();
-    });
-
-    $(".TextBox2").click(function(){
-        $(".TextBox2").hide();
-        $("#name").hide();
-        $(".JayCarter").hide();
-    });
-
-    $(".TextBox3").click(function(){
-        $(".TextBox3").hide();
-        $("#name").hide();
-        $(".JayCarter").hide();
-    });
-
-    $(".TextBox4").click(function(){
-        $(".TextBox4").hide();
-        $("#name").hide();
-        $(".JayCarter").hide();
-    });
-
-    $(".TextBox5").click(function(){
-        $(".TextBox5").hide();
-        $("#name").hide();
-        $(".JayCarter").hide();
+        clearInterval(myInterval)
+        $(".text").empty()
+        console.log($(".text"))
+        $(".all").show();
     });
 
 
@@ -410,24 +442,23 @@ setInterval(typing, 200)
     $(".typeback").click(function(){
         $(".type").hide();
         $(".type1").hide();
+        $(".all").show();
     });
 
     $(".textback").click(function(){
         $(".JayCarter").hide();
         $(".TextBox").hide(); 
-        $(".TextBox2").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
         $("#name").hide();
         $(".type").hide();
         $(".type1").hide();
-        if (i > content.length) {
-            text.textContent = "";
-            i = 0;
-        }
+        clearInterval(myInterval)
+        $(".text").empty()
+        console.log($(".text"))
+        $(".all").show();
     });
 
     $(".book1").click(function(){
+        $(".all").hide();
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper1").show();
@@ -436,21 +467,30 @@ setInterval(typing, 200)
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").hide();
-        $(".scrptN").hide();
-        $(".scrptB").show();
-        $(".scrptN1").hide();
-        $(".scrptFF").hide();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
+        $(".TextBox").fadeIn();
         $(".TextBox4").hide();   
         $(".TextBox5").hide();
+        
+        const content = "Something is inside of this book...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
    
     });
 
     $(".book2").click(function(){
+        $(".all").hide();
         var audio = new Audio('sound/Paper.mp3');
         audio.play();
         $("#paper2").show();
@@ -459,17 +499,25 @@ setInterval(typing, 200)
         $(".JayBack").show();
         $("#name").fadeIn();
         $(".JayNormal").hide();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").hide();
-        $(".scrptN").hide();
-        $(".scrptN1").hide();
-        $(".scrptFF").hide();
-        $(".scrptB").show();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
+        $(".TextBox").fadeIn();
         $(".TextBox4").hide();
         $(".TextBox5").hide();
+
+        const content = "Something is inside of this book...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
    
     });
 
@@ -547,91 +595,96 @@ setInterval(typing, 200)
     });
 
 
-    $(".book2").click(function(){
-        $("#paper2").show();
-        $(".JayCarter").fadeIn();
-        $(".JayBack").show();
-        $(".JayNormal").hide();
-        $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
-   
-    });
 
     $(".carpet").click(function(){
+        $(".all").hide();
         $("#paper5").show();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").show();
-        $(".scrptN").hide();
-        $(".scrptN1").hide();
-        $(".scrptFF").hide();
-        $(".scrptB").hide();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();
-        $(".TextBox5").hide();
+        $(".TextBox").fadeIn();
         $(".carpet").remove();
+
+        const content = "Something is underneath of this carpet...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
    
     });
 
 
     $(".newspaper").click(function(){
+        $(".all").hide();
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").hide();       
-        $(".scrptB").hide();
-        $(".scrptN").hide();
-        $(".scrptN1").show(); 
-        $(".scrptFF").hide();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
+        $(".TextBox").fadeIn();
         $(".TextBox4").hide();
         $(".TextBox5").hide();
+        $(".newspaper").remove();
+        $(".newspaper1").show();
+
+        const content = "There is nothing special with this newspaper.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
    
     });
 
     
-    $(".newspaper").dblclick(function(){
+    $(".newspaper1").click(function(){
+        $(".all").hide();
         $("#paper4").show();
         $(".JayCarter").fadeIn();
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").hide();       
-        $(".scrptB").hide();
-        $(".scrptN").show();
-        $(".scrptN1").hide();   
-        $(".scrptFF").hide();
-        $(".newspaper").hide();  
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
+        $(".TextBox").fadeIn();
         $(".TextBox4").hide();
         $(".TextBox5").hide();
-        $(".newspaper").remove();
+        $(".newspaper1").remove();
+
+        const content = " Wait, I can feel something is behind...";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
 
     });
-
-
-
-   
-var typingBool = false; 
-var typingIdx=0; 
-
 
 
 
@@ -652,17 +705,30 @@ $( function() {
         var audio = new Audio('sound/dooropenning.mp3');
         audio.play();
 
+        const content = "...!";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
         $(".JayCarter").fadeIn();
         $(".JayBack").hide();
         $(".JayNormal").show();
         $("#name").fadeIn();
-        $(".TextBox5").fadeIn();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox2").hide();
-        $(".TextBox3").hide();
+        $(".TextBox").fadeIn();
         $(".TextBox4").hide();
-        $(".TextBox5").click(function(){
+        $(".textback").hide();
+        $(".textback2").show();
+        $(".textback2").click(function(){
           $(".end").fadeIn(1500);
           var audio = new Audio('sound/end.mp3');
           audio.play();});
@@ -670,7 +736,8 @@ $( function() {
         $(".JayCarter").click(function(){
             $(".end").fadeIn(1500);
             var audio = new Audio('sound/end.mp3');
-            audio.play();}
+            audio.play();
+}
         )}
   
 });
@@ -690,16 +757,22 @@ $( function() {
         $(".JayBack").show();
         $(".JayNormal").hide();
         $("#name").fadeIn();
-        $(".TextBox2").fadeIn();
-        $(".scrptC").hide();
-        $(".scrptN").hide();
-        $(".scrptB").hide();
-        $(".scrptN1").hide();
-        $(".scrptFF").show();
-        $(".TextBox1").hide();
-        $(".TextBox").hide();
-        $(".TextBox3").hide();
-        $(".TextBox4").hide();   
+        $(".TextBox").fadeIn();
+        const content = "Something is here... a glass bottle?";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
 
         }
   

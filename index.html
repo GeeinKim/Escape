@@ -26,14 +26,14 @@
           </audio>
         <div class="BB"></div>
 
-    <div class= "objects">
         <div class= "Background">
 
             <div class= "Background1"> <img id= "B1" src="Image/Background1.png">
             </div> 
             <div class= "Background2"><img id= "B2" src="Image/Background2.png"></div></div>
-    </div>
 
+<div class="all">
+    <div class= "objects"></div>
 
     <div class= "door">  </div>
     <div class= "fireplace" id="fireplace">  </div>
@@ -42,15 +42,10 @@
     <div class= "book1" ></div>
     <div class= "book2" ></div>
     <div class= "carpet" ></div>
-    <div class="newspaper"></div>
+    <div class="newspaper" id="newspaper"></div>
+    <div class="newspaper1"id="newspaper"></div>
     <div class="wall"></div>
     <div class="QuoteBook"></div>
-
-
-<div class="Arrow">
-    <div class = "Arrow1"><img src="Image/left.png"></div>
-    <div class = "Arrow2"><img src="Image/right.png"></div>
-</div>
 
 <div class="bookPile">
     <div class="bookPile1"></div>
@@ -60,6 +55,7 @@
     <div class="bookPile5"></div>
     <div class="bookPile6"></div>
     <div class="bookPile7"></div>
+</div>
 </div>
 
 <div class="recordPlayer"></div>
@@ -165,6 +161,10 @@
     <div id="inventoryFoot"><p>Back</p></div>
 </div>
 
+<div class="Arrow">
+    <div class = "Arrow1"><img src="Image/left.png"></div>
+    <div class = "Arrow2"><img src="Image/right.png"></div>
+</div>
 
 <div class="paper2" id="item"><img src="Image/Q2.png"></div>
 
@@ -194,64 +194,16 @@
 
 <div class= "TextBox">
     <div class="textback"><img src="Image/quill.png"></div>
+    <div class="textback1"><img src="Image/quill.png"></div>
+    <div class="textback2"><img src="Image/quill.png"></div>
+    <div class="textback3"><img src="Image/quill.png"></div>
     <div id="Tbody">
-        <p class="scrpt" id="scrpt_"> Nothing is here. </p>
-        <p class="scrptlocked"> It seems I need a key to open this... </p>
-        <span class="text"></span>
+        <p class="scrpt" id="scrpt_"> </p>
+        <div class="text"></div>
         <p class="typing"></p> 
     </div>
 </div>
 
-
-
-<div class= "TextBox1">  
-    <div id="Tbody"> 
-    <p class="scrptT"> Maybe I can type in this typewriter... </p>
-    
-    <p class="scrptQB"> Which page should I read? </p>
-
-    <p class="typing"></p> </div></div>
-
-<div class= "TextBox2">
-    <div class="textback"><img src="Image/quill.png"></div>
-    <div id="Tbody">
-        <p class="scrptB"> Something is inside of this book... </p>
-        <p class="scrptN"> Wait, I can feel something is behind... </p>
-        <p class="scrptN1"> There is nothing special with this newspaper. </p>
-        <p class="scrptC"> Something is underneath of this carpet... </p>
-        <p class="scrptFF"> Something is there... </p>
-        <p class="typing"></p> 
-    </div>
-
-</div>
-
-<div class= "TextBox3">
-    <div class="textback"><img src="Image/quill.png"></div>
-    <div id="Tbody">
-        <p class="scrptW"> I need to move to see this side of the room. </p>
-        <p class="scrpt_bookPile1"> It is not a good idea to read a book right now...  </p>
-        <p class="scrpt_fire"> I'm going to burn my hand if I reach there.  </p>
-        <p class="typing"></p> 
-    </div>
-</div>
-
-
-<div class= "TextBox4">
-    <div id="Tbody">
-        <p class="scrptK"> ...Something came out. </p>
-        <p class="scrptNo"> Well, maybe this is not a correct answer. </p>
-        <p class="scrptQNo"> Nothing is special with this page... </p>
-        <p class="scrptQYes"> 'Nothing is a waste of time if you use the experience wisely. – <em>Auguste Rodin</em>' </p>
-        <p class="typing"></p> 
-    </div>
-</div>
-
-<div class= "TextBox5">
-    <div id="Tbody">
-        <p class="scrpEnd"> ...! </p>
-        <p class="typing"></p> 
-    </div>
-</div>
 
 <div id="name"><h1>Journalist J</h1></div>
 
@@ -270,31 +222,55 @@ function func() {
 	if(answer == ""){
 
         $(".JayCarter").fadeIn();
-        $(".TextBox4").fadeIn();
+        $(".TextBox").fadeIn();
         $("#name").fadeIn();
-        $(".scrptK").hide();
-        $(".scrptNo").show();
-        $(".scrptQNo").hide();
-        $(".scrptQYes").hide()
-        $(".TextBox4").click(function(){
+
+        const content = "Well, maybe this is not a correct answer.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
 	}
 	else if(answer == "nothing"){
         $("#key").show();
         $(".type").fadeOut();
         $("#name").fadeIn();
         $(".JayCarter").fadeIn();
-        $(".TextBox4").fadeIn();
-        $(".scrptK").show();
-        $(".scrptNo").hide();
-        $(".scrptQNo").hide();
-        $(".scrptQYes").hide();
-        $(".TextBox4").click(function(){
+        $(".TextBox").fadeIn();
+        const content = "...Something came out.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
         
 	}
     else if(answer == "Nothing"){
@@ -302,32 +278,55 @@ function func() {
         $(".type").fadeOut();
         $("#name").fadeIn();
         $(".JayCarter").fadeIn();
-        $(".TextBox4").fadeIn();
-        $(".scrptK").show();
-        $(".scrptNo").hide();
-        $(".scrptQNo").hide();
-        $(".scrptQYes").hide();
-        $(".TextBox4").click(function(){
+        $(".TextBox").fadeIn();
+        const content = "...Something came out.";
+        const text = document.querySelector(".text");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
         
 	}
 	else{
 		document.getElementById('answer').value = "";
 
         $(".JayCarter").fadeIn();
-        $(".TextBox4").fadeIn();
+        $(".TextBox").fadeIn();
         $("#name").fadeIn();
-        $(".scrptK").hide();
-        $(".scrptNo").show();
-        $(".scrptQNo").hide();
-        $(".scrptQYes").hide()
+
+  const content = "Well, maybe this is not a correct answer.";
+        const text = document.querySelector(".text");
+        let i = 0;
         
-        $(".TextBox4").click(function(){
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+        
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
 	}
 }
 
@@ -348,49 +347,84 @@ function func1() {
 	let answer1 = document.getElementById('answer1').value;
 	if(answer1 == ""){
         $(".JayCarter").fadeIn();
+        $(".TextBox").fadeIn();
         $("#name").fadeIn();
-        $(".TextBox4").fadeIn();
-        $(".scrptK").hide();
-        $(".scrptNo").hide();
-        $(".scrptQNo").show();
-        $(".scrptQYes").hide()
+
+        const content = "Nothing is special with this page...";
+        const text = document.querySelector(".text");
+        let i = 0;
         
-        $(".TextBox4").click(function(){
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
 	}
 	else if(answer1 == "51"){
-        $(".type1").fadeOut();
         $(".JayCarter").fadeIn();
+        $(".TextBox").fadeIn();
         $("#name").fadeIn();
-        $(".TextBox4").fadeIn();
-        $(".scrptK").hide();
-        $(".scrptNo").hide();
-        $(".scrptQNo").hide();
-        $(".scrptQYes").show()
+
+        const content = "Nothing is a waste of time if you use the experience wisely. <Auguste Rodin>";
+        const text = document.querySelector(".text");
+        let i = 0;
         
-        $(".TextBox4").click(function(){
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
  
         
 	}
 	else{
 		document.getElementById('answer').value = "";
         $(".JayCarter").fadeIn();
-        $(".TextBox4").fadeIn();
-        $(".scrptK").hide();
-        $(".scrptNo").hide();
-        $(".scrptQNo").show();
+        $(".TextBox").fadeIn();
         $("#name").fadeIn();
-        $(".scrptQYes").hide()
+
+        const content = "Nothing is special with this page...";
+        const text = document.querySelector(".text");
+        let i = 0;
         
-        $(".TextBox4").click(function(){
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>": txt;
+        
+            if (i>=content.length){
+                clearInterval(myInterval)
+            }
+            
+        }
+        
+        myInterval = setInterval(typing, 110)
+
+        $(".textback3").click(function(){
             $(".JayCarter").hide();
             $("#name").hide();
-            $(".TextBox4").hide();});
+            $(".TextBox").hide();});
 	}
 }
 
