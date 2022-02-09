@@ -271,7 +271,7 @@ text-align:center;
 
 #bt{
     height: 75px;
-    width: 15.625vw;
+    width: 18.5vw;
     position:fixed;
     z-index: 60;
     border-radius: 10px;
@@ -330,7 +330,7 @@ text-align:center;
 
 #bt:hover{
     height: 75px;
-    width: 22vw;
+    width: 18.5vw;
     position:fixed;
     z-index: 101;
     border-radius: 10px;
@@ -977,8 +977,8 @@ img{
     }
     
     #bt{
-        height: 70px;
-        width: 210px;
+        height: 75px;
+        width: 18.5vw;
         position:fixed;
         z-index: 60;
         border-radius: 10px;
